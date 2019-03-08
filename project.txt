@@ -2,3 +2,4 @@ Internet advertisement project!!
 
 User Registration, login (Name, Email, Phone, Address, Password), (Email, Password)
 Afterwards, show MyItem, AddItem at Nav bar and logout at the top corner
+...
