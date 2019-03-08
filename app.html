@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html{
+			background: #efefef;
+		}
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background: #fff;
+			width: 800px;
+			margin: 20px auto;
+			padding: 8px;
+			border: 2px solid #aaa;
+		}
+		h1 {
+			font-size: 32px;
+			text-align: center;
+			border-bottom: 1px solid brown;
+			margin: 0;
+			padding: 10px;
+		}
+		.wrap {
+			position: relative;
+			width: 650px;
+			padding: 10px;
+			margin: 10px auto;
+		}
+		.box {
+			height: 200px;
+		}
+		#box1 {
+			background: red;
+			text-align: center;
+			line-height: 200px;
+		}
+		#box2 {
+			background: green;
+			text-align: center;
+			line-height: 200px;
+			display: none;
+		}
+		#box3 {
+			background: blue;
+			text-align: center;
+			line-height: 200px;
+			display: none;
+		}
+		.btn {
+			position: absolute;
+			padding: 5px 10px;
+			border: 1px solid black;
+			border-radius: 10px;
+			background: white;
+			opacity: 0.4;
+		}
+		#btn1 {
+			top: 45%;
+			left: 15px;
+		}
+		#btn2 {
+			top: 45%;
+			left: 625px;
+		}
+		#overlay {
+			position: absolute;
+			display: none;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 500%;
+			background: #fff;
+			opacity: 0.7;
+		}
+		#dialog {
+			position: absolute;
+			display: none;
+			top: 30%;
+			left: 33%;
+			width: 33%;
+			background: #fff;
+			border: 2px solid black;
+			padding: 10px;
+		}
+		#dialog h2 {
+			font-size: 25px;
+			margin: 0px;
+			padding: 10px;
+			border-bottom: 0.7px solid lightblue;
+		}
+		#dialog h2 span {
+			margin: 0;
+			padding: 0 10px;
+			display: block;
+			color: red;
+			cursor: pointer;
+			float: right;
+		}
+		#dialog form {
+			padding: 10px;
+		}
+		#f1 {
+			margin-top: 10px;
+			width: 90%;
+		}
+		#f2 {
+			margin-top: 10px;
+			width: 90%;
+		}
+		input [type=submit] {
+			margin-top: 10px;
+			padding: 5px 10px;
+		}
+		#dialog textarea {
+			margin: 10px 0;
+			width: 92%;
+			height: 200px;
+		}
+		#education {
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+		<h1>WELCOME TO WiKi</h1>
+
+		<div class="wrap">
+			<button class="btn" id="btn1" onclick="prev()">&laquo;</button>
+			<button class="btn" id="btn2" onclick="next()">&raquo;</button>
+			<div class="box" id="box1">Box1</div>
+			<div class="box" id="box2">Box2</div>
+			<div class="box" id="box3">Box3</div>
+		</div>
+
+	<p>ဝီကီပီးဒီးယားသည် သုံးစွဲသူများက ပူးပေါင်း၍ ရေးသားတည်းဖြတ်သော စွယ်စုံကျမ်းဖြစ်ပါသည်။ ဝီကီဟု ခေါ်သော ဝက်ဘ်ဆိုက် ပုံစံတစ်မျိုးကို အသုံးပြု၍ ပူးပေါင်းရေးသားခြင်းကို အဆင်ပြေစေရန် စီမံထားခြင်း ဖြစ်ပါသည်။ သုံးစွဲသူများမှ နာရီအလိုက် ပြင်ဆင်မှုပေါင်း များစွာကို ပြုလုပ်၍ ဝီကီပီးဒီးယားကို ပို၍ကောင်းမွန်အောင် ဆောင်ရွက်နေကြပါသည်။ မြန်မာဝီကီပီးဒီးယားတွင် ယူနီကုဒ် ၅.၂ စံနှုန်းကို လိုက်နာသော မည်သည့်ဖောင့်အမျိုးအစား နှင့်မဆို ဖတ်ရှုခြင်း၊ တည်းဖြတ်ခြင်းများ ပြုလုပ်နိုင်ပါသည်။ </p>
+	<p>ကာဂျစ္စတန်နိုင်ငံ (တရားဝင်အမည်အားဖြင့် ကာဂျစ်သမ္မတနိုင်ငံ) အား ယခင်က ကာဂျစ်ဇီးယားဟု ခေါ်ဝေါ်ခဲ့ကာ အာရှ အလယ်ပိုင်းတွင် ရှိသော နိုင်ငံတစ်နိုင်ငံ ဖြစ်သည်။ ကုန်းတွင်းပိတ်နိုင်ငံ ဖြစ်ပြီး တောင်ကုန်းထူထပ်ကာ မြောက်ဘက်တွင် ကာဇက်စတန်နိုင်ငံ၊ အနောက်ဘက်တွင် ဥဇဘက်ကစ္စတန်နိုင်ငံ၊ အနောက်တောင်ဘက်တွင် တာဂျစ်ကစ္စတန်နိုင်ငံ နှင့် အရှေ့ဘက်တွင် တရုတ်ပြည်သူ့သမ္မတနိုင်ငံ တို့က ဝိုင်းရံထားသည်။ အကြီးဆုံးမြို့နှင့် မြို့တော်မှာ ဘီရှကက်မြို့ဖြစ်သည်။ 
+	ကာဂျစ္စတန်နိုင်ငံ၏ သမိုင်းကြောင်းမှာ နှစ်ပေါင်း ၂၀၀၀ ကျော်မျှ ရှည်လျားပြီး အမျိုးမျိုးသော ယဉ်ကျေးမှုများနှင့် အင်ပိုင်ယာ 
+	လွှမ်းခြုံ အုပ်မိုး တည်ရှိခဲ့ရာနိုင်ငံ ဖြစ်သည်။ ပထဝီ အနေအထားအားဖြင့် တောင်ကုန်းများ ထူထပ်စွာ တည်ရှိသော မြေမျက်နှာသွင်ပြင်ကြေ 
+	တသီးတခြား တည်ရှိကာ ၎င်း၏ ရှေးကျသော ယဉ်ကျေးမှုကို ထိန်းသိမ်းရန် တနည်းတဖုံ ကူညီရာ ရောက်ခဲ့သော်လည်း ကာဂျစ္စတန်နိုင်င 
+	သမိုင်းကြောင်းအရ ကြီးကျယ်ခမ်းနားသော ယဉ်ကျေးမှု လူ့အဖွဲ့အစည်းကြီး အချို့၏ ဆုံစည်းရာ နေရာ ဖြစ်ခဲ့ပြီး ပိုးသားလမ်းမကြ 
+	အစိတ်အပိုင်းနှင့် အခြားသော စီးပွားရေး နှင့် ယဉ်ကျေးမှု ပေါင်းဆုံရာ လမ်းကြောင်းများ၏ တစိတ်တဒေသ ဖြစ်ခဲ့သည်။ ကာဂျစ္စတန် နိုင်င 
+	အခြားနိုင်ငံများ၏ လွှမ်းမိုးမှုကို အစဉ်သဖြင့် ခံခဲ့ရပြီး ၁၉၉၁ ခုနှစ် ဆိုဗီယက် ပြည်ထောင်စု ပြိုကွဲပြီးချိန်တွင်မှ အချုပ်အခြာ အာဏာပိုင် နိုတစ်နိုင်ငံ ဖြစ်လာခဲ့သည်။ </p>
+	<button onclick="showDialog()">Get Started</button>
+
+	<div id="overlay" onclick="hideDialog()"></div>
+	<div id="dialog">
+		<h2>Sign Up <span onclick="hideDialog()">&times;</span></h2>
+		<form>
+			<input type="text" placeholder="Full Name" id="f1"><br>
+			<input type="Email" placeholder="Email Address" id="f2">  <br>
+			<textarea placeholder="Address"></textarea>  <br>
+			<input type="radio" name="gender" id="male">
+			<label for="male">Male</label>
+			<input type="radio" name="gender" id="female">
+			<label for="female">Female</label>  <br> <br>
+			<label for="education" id="l1">Highest Education</label> <br>
+			<select id="education">
+				<option>High School</option>
+				<option>Bachelor</option>
+				<option>Post Graducate Diploma</option>
+				<option>Master</option>
+				<option>Ph.D</option>
+			</select>  <br> 
+			<input type="submit" value="Done">
+			<input type="reset" value="Reset">
+		</form>
+	</div>
+	<script>
+		setInterval(next,5000);
+		var swipe=1;
+		function next () {
+			document.getElementById('box'+swipe).style.display='none';
+			swipe++; if (swipe>3) swipe=1;
+			document.getElementById('box'+swipe).style.display='block';
+		}
+		function prev () {
+			document.getElementById('box'+swipe).style.display='none';
+			swipe--; if (swipe<1) swipe=3;
+			document.getElementById('box'+swipe).style.display='block';
+		}
+		function showDialog() {
+			document.getElementById('overlay').style.display='block';
+			document.getElementById('dialog').style.display='block';
+		}
+		function hideDialog() {
+			document.getElementById('overlay').style.display='none';
+			document.getElementById('dialog').style.display='none';
+		}
+	</script>
+</body>
+</html>
